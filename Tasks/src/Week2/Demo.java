@@ -1,6 +1,7 @@
 package Week2;
 
 import java.util.*;
+import java.util.Collections;
 
 /**
  * @author fz
@@ -17,11 +18,7 @@ public class Demo {
         * 选择桌宠
         **/
         Scanner scanner = new Scanner(System.in);
-
-
-        pets.forEach((k, v) -> {
-            System.out.println(k + " ");
-        });
+        pets.forEach((k, v) -> System.out.println(k + " "));
         System.out.println("请选择桌宠(输入桌宠的名字)：");
         String petName = scanner.next();
         Pet pet = pets.get(petName);
@@ -30,21 +27,13 @@ public class Demo {
 
         // 初始化食物和道具
         List<Food> hpFoods = new ArrayList<>();
-        hpFoods.add(new Food("沙拉", 10, FoodType.HP));
-        hpFoods.add(new Food("香煎牛仔骨", 20, FoodType.HP));
-        hpFoods.add(new Food("西冷牛排", 30, FoodType.HP));
+        Collections.addAll(hpFoods, new Food("沙拉", 10, FoodType.HP), new Food("香煎牛仔骨", 20, FoodType.HP), new Food("西冷牛排", 30, FoodType.HP));
 
         List<Food> staminaFoods = new ArrayList<>();
-        staminaFoods.add(new Food("芝士焗虾", 10, FoodType.STAMINA));
-        staminaFoods.add(new Food("盐焗鸡", 20, FoodType.STAMINA));
-        staminaFoods.add(new Food("东坡肘子", 30, FoodType.STAMINA));
+        Collections.addAll(staminaFoods,new Food("芝士焗虾", 10, FoodType.STAMINA),new Food("盐焗鸡", 20, FoodType.STAMINA),new Food("东坡肘子", 30, FoodType.STAMINA));
 
         List<Item> items = new ArrayList<>();
-        items.add(new Item("麦克风", 10));
-        items.add(new Item("i9", 20));
-        items.add(new Item("4090", 30));
-
-        // 游戏循环
+        Collections.addAll(items,new Item("麦克风", 10),new Item("i9", 20),new Item("4090", 30));
         while (true) {
             // 显示宠物信息
             System.out.println("宠物名称：" + pet.getName());

@@ -7,15 +7,15 @@ import java.util.Objects;
  */
 public class Pet {
     //桌宠类
-    private String name;
-    private int money;
-    private int hp;
-    private int maxHp;
-    private double exp;
-    private int level;
-    private double stamina;
-    private double minStamina;
-    private double maxStamina;
+    private String name;     //宠物名称
+    private int money;      //金币
+    private int hp;         //当前血量
+    private int maxHp;      //最大血量
+    private double exp;     //当前经验值
+    private int level;      //当前等级
+    private double stamina;     //当前体力
+    private double minStamina;  //体力下限
+    private double maxStamina;  //体力上限
 
     private boolean isWorking = false; //是否正在工作
 
@@ -36,7 +36,7 @@ public class Pet {
     }
 
     public void work() {
-        if (stamina < 10) {
+        if (stamina < 8.5) {
             System.out.println("体力不足，无法工作");
             return;
         }

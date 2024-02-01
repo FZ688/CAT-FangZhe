@@ -4,8 +4,8 @@ package Week2;
  * @author fz
  */
 public class Item {
-    private String name;
-    private int value;
+    private String name;    //道具名称
+    private int value;      //使用道具所能获得的经验值
 
     public Item(String name, int value) {
         this.name = name;

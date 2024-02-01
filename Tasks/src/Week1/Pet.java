@@ -14,7 +14,7 @@ public class Pet {
     private int level=0;   //等级
     private double stamina = 100;  //体力
     private final double maxStamina = 100; //体力上限
-    private final double minStamina = 10; //体力下限
+    private final double minStamina = 10; //体力下限1
 
 
 
